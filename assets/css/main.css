@@ -1,0 +1,218 @@
+/* --- Global styles --- */
+body {
+  font-family: Arial, sans-serif;
+  margin: 40px;
+  background: #f7f7f7;
+  color: #333;
+}
+
+/* --- Container --- */
+.container {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* --- Headings --- */
+h1 {
+  color: #007acc;
+}
+
+/* --- Layout: headshot + text --- */
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+/* --- Headshot image --- */
+.about img {
+  width: 220px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* --- Text area --- */
+.about-text {
+  flex: 1;
+  min-width: 260px;
+}
+
+/* --- Links --- */
+a {
+  color: #007acc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* --- Responsive adjustments --- */
+@media (max-width: 700px) {
+  body {
+    margin: 20px;
+  }
+
+  .about {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about img {
+    width: 80%;
+    height: auto;
+  }
+
+  .about-text {
+    text-align: left;
+  }
+}
+
+/* --- Work Experience Section --- */
+.experience {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 60px auto;
+}
+
+.experience h2 {
+  color: #007acc;
+  margin-bottom: 24px;
+  border-bottom: 2px solid #e3e3e3;
+  padding-bottom: 8px;
+  font-size: 26px;
+}
+
+/* Individual job entries */
+.job {
+  margin-bottom: 28px;
+}
+
+.job:last-child {
+  margin-bottom: 0;
+}
+
+.job h3 {
+  font-size: 18px;
+  color: #222;
+  margin-bottom: 6px;
+}
+
+.job h3 span {
+  color: #007acc;
+  font-weight: normal;
+}
+
+.job .time {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.job ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #444;
+}
+
+.job ul li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+/* Responsive layout */
+@media (max-width: 700px) {
+  .experience {
+    margin: 40px 16px;
+    padding: 24px;
+  }
+
+  .experience h2 {
+    font-size: 22px;
+  }
+
+  .job h3 {
+    font-size: 17px;
+  }
+}
+
+/* --- Education Section --- */
+.education {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 60px auto;
+}
+
+.education h2 {
+  color: #007acc;
+  margin-bottom: 24px;
+  border-bottom: 2px solid #e3e3e3;
+  padding-bottom: 8px;
+  font-size: 26px;
+}
+
+.edu-item {
+  margin-bottom: 28px;
+}
+
+.edu-item:last-child {
+  margin-bottom: 0;
+}
+
+.edu-item h3 {
+  font-size: 18px;
+  color: #222;
+  margin-bottom: 6px;
+}
+
+.school {
+  color: #007acc;
+  font-weight: 500;
+  margin: 0 0 4px 0;
+}
+
+.time {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.edu-item ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #444;
+}
+
+.edu-item ul li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+/* Responsive layout */
+@media (max-width: 700px) {
+  .education {
+    margin: 40px 16px;
+    padding: 24px;
+  }
+
+  .education h2 {
+    font-size: 22px;
+  }
+
+  .edu-item h3 {
+    font-size: 17px;
+  }
+}

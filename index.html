@@ -1,32 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Christy (Guanyi) Zhang</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      background: #f7f7f7;
-      color: #333;
-    }
-    .container {
-      max-width: 700px;
-      margin: auto;
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    h1 { color: #007acc; }
-  </style>
+  <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>Christy (Guanyi) Zhang</h1>
-    <p>MEng ECE @ UBC</p>
-    <p>Welcome to my personal website! I’m passionate about data analysis, backend development, and applied machine learning. Here you can find my projects, past work experience, and contact info.</p>
-    <p><a href="https://github.com/christygyzhang">GitHub</a> | <a href="mailto:christyyz16@gmail.com">Email</a> | <a href="https://linkedin.com/in/christygyzhang">LinkedIn</a></p>
-  </div>
+  <header>
+    <div class="container">
+      <h1>Christy (Guanyi) Zhang</h1>
+      <p>
+        <a href="https://github.com/christygyzhang" target="_blank" rel="noopener">GitHub</a> |
+        <a href="https://linkedin.com/in/christygyzhang" target="_blank" rel="noopener">LinkedIn</a>
+      </p>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section id="about" class="about" aria-labelledby="about-title">
+        <img src="assets/img/headshot.jpg" alt="Headshot of Christy Zhang" loading="lazy" />
+        <div class="about-text">
+          <h2 id="about-title">About Me</h2>
+          <p>Hello! I’m Christy. I recently graduated from the Master of Engineering in Computer Engineering program at the University of British Columbia.</p>
+          <p>My work centers on data analysis and applied machine learning, where I enjoy uncovering insights from data and developing models that solve practical problems. I also have strong experience in backend development, which allows me to build the data pipelines and deployment systems that support end-to-end machine learning workflows.</p>
+          <p>During my time at UBC, I worked on projects involving resource-efficient fine-tuning and deployment of large language models (LLMs) using techniques like LoRA, QLoRA, and structured pruning to improve performance on edge devices. I also contributed as a Research Assistant, managing large-scale data collection and model evaluation, and served as a Teaching Assistant for a business analytics course, where I helped students strengthen their data visualization and coding skills.</p>
+          <p>I’m passionate about developing data-driven systems that combine intelligent modeling with efficient deployment. I’m currently seeking opportunities in data analysis and applied machine learning, where I can apply my technical and analytical skills to build practical solutions.</p>
+        </div>
+      </section>
+    </div>
+
+    <div class="container">
+      <section id="education" class="education" aria-labelledby="edu-title">
+        <h2 id="edu-title">Education</h2>
+
+        <div class="edu-item">
+          <h3>Master of Engineering in Computer Engineering</h3>
+          <p class="school">University of British Columbia · Vancouver, Canada</p>
+          <p class="time">Sep 2024 – Aug 2025</p>
+          <p class="gpa">GPA: 4.33/4.33</p>
+          <ul>
+            <li>Focused on applied machine learning and large language models.</li>
+            <li>Graduate Research Project: Resource-Efficient Large Language Model (LLM) on Log Anomaly Detection.</li>
+          </ul>
+        </div>
+
+        <div class="edu-item">
+          <h3>Bachelor of Applied Science in Computer Engineering</h3>
+          <p class="school">University of British Columbia · Vancouver, Canada</p>
+          <p class="time">Sep 2019 – May 2024</p>
+          <p class="gpa">Graduation with Distinction | GPA: 4.0/4.33</p>
+          <ul>
+            <li>Developed a strong foundation in computer systems, algorithms, and data processing.</li>
+            <li>Explored topics in software engineering, databases, and machine learning applications.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <div class="container">
+      <section id="experience" class="experience" aria-labelledby="exp-title">
+        <h2 id="exp-title">Work Experience</h2>
+        <div class="job">
+          <h3>Research Assistant · <span>UBC Sauder School of Business</span></h3>
+          <p class="time">Aug 2023 – Present · Vancouver, Canada</p>
+          <ul>
+            <li>Built data pipelines to collect and process multimodal data from 500K+ Bilibili posts (text + images), enabling large-scale analysis.</li>
+            <li>Engineered features from images, videos, and subtitles, such as embeddings, color distributions, scene duration, and text-based statistics.</li>
+            <li>Applied machine learning models on feature data to uncover behavioral patterns and correlations.</li>
+            <li>Developed automation scripts to support efficient data processing and feature extraction workflows.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <h3>Teaching Assistant — Business Programming and Analytics · <span>UBC Sauder School of Business</span></h3>
+          <p class="time">Jan 2025 – Apr 2025 & Jul 2025 – Aug 2025 · Vancouver, Canada</p>
+          <ul>
+            <li>Graded assignments and exams, providing detailed comments and feedback to help students improve code structure, logic, and analytical presentation.</li>
+            <li>Held office hours to answer course-related questions, review key materials, and guide students in exam preparation.</li>
+            <li>Prepared course materials and examples used in lectures and the final course project to support hands-on learning in data analysis and programming.</li>
+          </ul>
+        </div>
+
+
+        <div class="job">
+          <h3>Data Analyst Intern · <span>Industrial and Commercial Bank of China (ICBC)</span></h3>
+          <p class="time">Mar 2023 – Apr 2023 · Beijing, China</p>
+          <ul>
+            <li>Analyzed customer churn data across multiple branches and identified patterns to support customer engagement improvements.</li>
+            <li>Examined customer characteristics and spending behavior using third-party payment data to support targeted business decisions.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <h3>Assistant Engineer, Platform Development (Intern) · <span>Lenovo</span></h3>
+          <p class="time">Oct 2022 – Feb 2023 · Beijing, China</p>
+          <ul>
+            <li>Designed and implemented a relational database for a warehouse management system (WMS) based on client workflow requirements.</li>
+            <li>Developed prototype web and mobile interfaces using C#, .NET, and MySQL to demonstrate core system functionality.</li>
+          </ul>
+        </div>
+
+    </div>
+
+  </main>
 </body>
 </html>

@@ -2,23 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Christy (Guanyi) Zhang</title>
+  <title>Guanyi (Christy) Zhang</title>
   <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>Christy (Guanyi) Zhang</h1>
-      <p>
-        <a href="https://github.com/christygyzhang" target="_blank" rel="noopener">GitHub</a> |
-        <a href="https://linkedin.com/in/christygyzhang" target="_blank" rel="noopener">LinkedIn</a>
-      </p>
-      <nav>
-        <a href="index.html">Home</a> |
-        <a href="projects.html">Projects</a>
-      </nav>
-    </div>
-  </header>
+  <div id="header-placeholder"></div>
 
   <main>
     <div class="container">
@@ -108,5 +99,31 @@
     </div>
 
   </main>
+
+  <script>
+    const headerHTML = `
+    <header class="header">
+      <h1>Guanyi (Christy) Zhang</h1>
+      
+      <p class="social-links">
+        <a href="mailto:christyyz16@gmail.com">
+          <i class="fas fa-envelope"></i> Email
+        </a> |
+        <a href="https://github.com/christygyzhang" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i> GitHub
+        </a> |
+        <a href="https://linkedin.com/in/christygyzhang" target="_blank" rel="noopener">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+      </p>
+
+      <nav class="navbar">
+        <a href="index.html" data-nav>Home</a>
+        <a href="projects.html" data-nav>Projects</a>
+      </nav>
+    </header>
+    `;
+    document.getElementById('header-placeholder').innerHTML = headerHTML;
+  </script>
 </body>
 </html>

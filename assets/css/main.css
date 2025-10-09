@@ -75,158 +75,155 @@ body { margin: 0; }
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-
-
+/* --------------------------------------------------------------------------------------- */
+/* --- Home Page --- */
 /* --- About Me Section --- */
 .about {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
   gap: 24px;
+  margin: 0 4%;
 }
 
 .about img {
-  width: 220px;
-  height: 280px;
+  width: 250px;
+  height: 320px;
   object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-/* --- Text area --- */
 .about-text {
   flex: 1;
   min-width: 260px;
 }
 
-/* --- Work Experience Section --- */
-.experience {
-  background: white;
+/* --- Two Columns for Education and Work Experience --- */
+.two-column-sections {
+  display: flex;
+  align-items: flex-start;      /* align top */
+  justify-content: space-between;
+  margin: 60px 4%;
+  gap: 2%;
+  width: auto;
+}
+
+.two-column-sections .education {
+  flex: 0 1 auto;
+  width: auto;
+  max-width: 46%;
+  white-space: nowrap;
+  background: #fff;
   border-radius: 12px;
   padding: 30px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  max-width: 800px;
-  margin: 60px auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-.experience h2 {
-  color: #007acc;
-  margin-bottom: 24px;
-  border-bottom: 2px solid #e3e3e3;
-  padding-bottom: 8px;
-  font-size: 26px;
+.two-column-sections .education h3,
+.two-column-sections .education p,
+.two-column-sections .education li {
+  white-space: normal;
 }
 
-/* Individual job entries */
-.job {
-  margin-bottom: 28px;
-}
-
-.job:last-child {
-  margin-bottom: 0;
-}
-
-.job h3 {
-  font-size: 18px;
-  color: #222;
-  margin-bottom: 6px;
-}
-
-.job h3 span {
-  color: #007acc;
-  font-weight: normal;
-}
-
-.job .time {
-  color: #666;
-  font-size: 14px;
-  margin-bottom: 8px;
-}
-
-.job ul {
-  margin: 0;
-  padding-left: 20px;
-  color: #444;
-}
-
-.job ul li {
-  margin-bottom: 6px;
-  line-height: 1.5;
-}
-
-/* Responsive layout */
-@media (max-width: 700px) {
-  .experience {
-    margin: 40px 16px;
-    padding: 24px;
-  }
-
-  .experience h2 {
-    font-size: 22px;
-  }
-
-  .job h3 {
-    font-size: 17px;
-  }
-}
-
-/* --- Education Section --- */
-.education {
-  background: white;
+.two-column-sections .experience {
+  flex: 1;
+  background: #fff;
   border-radius: 12px;
   padding: 30px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  max-width: 800px;
-  margin: 60px auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-.education h2 {
+.two-column-sections h2 {
   color: #007acc;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   border-bottom: 2px solid #e3e3e3;
   padding-bottom: 8px;
-  font-size: 26px;
+  font-size: 24px;
+  white-space: nowrap;
 }
 
-.edu-item {
-  margin-bottom: 28px;
+@media (max-width: 900px) {
+  .two-column-sections {
+    flex-direction: column;
+    gap: 24px;
+    margin: 40px 6%;
+  }
+  .two-column-sections .education,
+  .two-column-sections .experience {
+    width: 100%;
+    max-width: none;
+  }
 }
 
-.edu-item:last-child {
-  margin-bottom: 0;
-}
-
+/* --- Education --- */
+.edu-item { margin-bottom: 24px; }
+.edu-item:last-child { margin-bottom: 0; }
 .edu-item h3 {
   font-size: 18px;
   color: #222;
-  margin-bottom: 6px;
+  margin: 0 0 6px;
 }
-
 .school {
   color: #007acc;
-  font-weight: 500;
+  font-weight: 600;
   margin: 0 0 4px 0;
 }
-
 .time {
   color: #666;
   font-size: 14px;
-  margin-bottom: 8px;
+  margin: 0 0 8px;
 }
-
 .edu-item ul {
   margin: 0;
   padding-left: 20px;
   color: #444;
 }
-
 .edu-item ul li {
   margin-bottom: 6px;
   line-height: 1.5;
 }
 
+.gpa {
+  display: inline-block;
+  background: #eef7ff;
+  color: #0c4a6e;
+  border: 1px solid #d6ecff;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  margin: 0 0 10px;
+}
+.gpa span { font-weight: 700; margin-right: 6px; }
 
-/* Project Page */
+/* --- Work Experience --- */
+.job { margin-bottom: 24px; }
+.job:last-child { margin-bottom: 0; }
+.job h3 {
+  font-size: 18px;
+  color: #222;
+  margin: 0 0 6px;
+}
+.job h3 span {
+  color: #007acc;
+  font-weight: normal;
+}
+.job .time {
+  color: #666;
+  font-size: 14px;
+  margin: 0 0 8px;
+}
+.job ul {
+  margin: 0;
+  padding-left: 18px;
+  color: #444;
+}
+.job ul li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+/* --------------------------------------------------------------------------------------- */
 /* --- Projects Page --- */
 .project {
   margin-bottom: 40px;

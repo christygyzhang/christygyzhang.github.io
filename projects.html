@@ -1,79 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Projects | Christy (Guanyi) Zhang</title>
-  <link rel="stylesheet" href="assets/css/main.css">
-  <div class="container">
-    <nav>
-    <a href="index.html">Home</a> |
-    <a href="projects.html">Projects</a>
-    </nav>
-</div>
+  <meta charset="UTF-8" />
+  <title>Christy (Guanyi) Zhang</title>
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <div class="container">
-    <h1>My Projects</h1>
-    
-    <div class="project">
-      <h2>Resource-Efficient Large Language Model for Log Anomaly Detection</h2>
-      <p>
-        This project explores how to make large language models more practical for log anomaly detection in resource-limited environments.
-        I developed a two-stage optimization pipeline combining Quantized Low-Rank Adaptation (QLoRA) for memory-efficient fine-tuning
-        and iterative structured pruning to compress the model for deployment.
-        Using the HDFS dataset, the pipeline reduced training memory by 85% and cut inference latency by 45%
-        while maintaining or improving accuracy (F1 = 0.944).
-        The optimized model was successfully deployed on a Raspberry Pi, demonstrating the feasibility of running transformer-based
-        log analytics on edge devices.
-      </p>
-      <p>
-        <a class="report-link" href="assets/project-reports/efficient-llm-lad.pdf" target="_blank">📄 View Report</a>
-      </p>
-    </div>
+  <div id="header-placeholder"></div>
 
-    <div class="project">
-      <h2>Investigating the Role of Test Cases in LLM-Based Python and JavaScript Code Translation</h2>
-      <p>
-        This project investigates how incorporating test cases can improve the accuracy of code translation between Python and JavaScript.
-        We developed a structured prompting pipeline that progressively enhances translation quality.
-        Starting from a simple instruction-based baseline, we first introduced test cases into the prompt to provide execution-level context, then added a one-shot example to guide consistent translation behavior.
-        Beyond these prompt variations, we applied an iterative refinement process that allows the language model to reattempt failed translations using feedback from previous outputs.
-        Translation correctness was evaluated by running the translated code against ground-truth test cases from the HumanEval-X dataset.
-        Experiments with Gemini-2.0-Flash and GPT-3.5-Turbo show that these techniques substantially improved translation accuracy—from 87.8% to 100% for Gemini and from 44.3% to over 90% for GPT-3.5—demonstrating the effectiveness of test-aware prompting and refinement in improving code reliability.
-      </p>
-      <p>
-        <a class="report-link" href="assets/project-reports/llm-code-translation.pdf" target="_blank">📄 View Report</a>
-      </p>
-    </div>
+  <main>
+    <div class="container">
+      <section id="projects" class="projects-section">
+        <h2 class="projects-title">My Projects</h2>
 
-    <div class="project">
-      <h2>Investigating Gender Bias in COMET-ATOMIC<span class="atomic20"><span>20</span><span>20</span></span></h2>
-      <p>
-        This project examines whether generative commonsense reasoning models encode gender bias in their outputs.
-        We analyzed COMET-ATOMIC<span class="atomic20"><span>20</span><span>20</span></span>, a model that generates if-then commonsense inferences, by systematically varying only the gendered subject names in event prompts.
-        Using a controlled dataset adapted from the WinoBias benchmark and curated lists of male, female, and unisex names, we compared outputs across BART- and GPT-2-based COMET-ATOMIC<span class="atomic20"><span>20</span><span>20</span></span> models.
-        The analysis included sentiment scoring, agreement evaluation, and lexical bias detection.
-        Results revealed statistically significant gender-based differences: for example, female-associated outputs contained more family-related terms and emotional expressions, while male-associated ones showed stronger associations with social and power-related language.
-        These findings highlight that even advanced generative commonsense models can reproduce or amplify gendered patterns, underscoring the need for bias evaluation in reasoning-level AI systems.
-      </p>
-      <p>
-        <a class="report-link" href="assets/pdfs/bias-comet-atomic.pdf" target="_blank">📄 View Final Report</a>
-      </p>
-    </div>
-    
+        <div class="projects-columns">
+          <!-- Left column -->
+          <div class="projects-column">
+            <article class="project-card">
+              <div class="project-media">
+                <img src="assets/img/efficient-llm-lad.png" alt="Raspberry Pi deployment for log anomaly detection" loading="lazy">
+              </div>
+              <div class="project-body">
+                <h3>Resource-Efficient Large Language Model for Log Anomaly Detection</h3>
+                <p>
+                This project explores how to make large language models more practical for log anomaly detection in resource-limited environments.
+                I developed a two-stage optimization pipeline combining Quantized Low-Rank Adaptation (QLoRA) for memory-efficient fine-tuning
+                and iterative structured pruning to compress the model for deployment.
+                Using the HDFS dataset, the pipeline reduced training memory by 85% and cut inference latency by 45%
+                while maintaining or improving accuracy (F1 = 0.944).
+                The optimized model was successfully deployed on a Raspberry Pi, demonstrating the feasibility of running transformer-based
+                log analytics on edge devices.
+              </p>
+                <p><a class="report-link" href="assets/project-reports/efficient-llm-lad.pdf" target="_blank" rel="noopener">View Report</a></p>
+              </div>
+            </article>
 
-    <div class="project">
-      <h2>Transformer-Based Actor-Critic Agent</h2>
-      <p>
-        This project explores how transformer architectures can enhance reinforcement learning by enabling agents to better capture long-term dependencies and sequential decision patterns. 
-        We designed a Transformer-Based Actor-Critic (TBAC) model that integrates transformer blocks into the critic network, leveraging self-attention to model temporal relationships in state–action trajectories.
-        The model was evaluated on OpenAI Gym’s Pendulum environment, where it demonstrated improved stability and generalization compared to a standard Actor-Critic (AC) baseline.
-      </p>
-      <p>
-        <a class="report-link" href="assets/pdfs/transformer-RL.pdf" target="_blank">📄 View Final Report</a>
-      </p>
-    </div>
+            <article class="project-card">
+              <div class="project-media">
+                <img src="assets/img/comet-atomic.png" alt="Gender Bias in AI" loading="lazy" style="width: 60%">
+              </div>
+              <div class="project-body">
+                <h3>Investigating Gender Bias in COMET-ATOMIC<span class="atomic20"><span>20</span><span>20</span></span></h3>
+                <p>
+                This project examines whether generative commonsense reasoning models encode gender bias in their outputs.
+                We analyzed COMET-ATOMIC<span class="atomic20"><span>20</span><span>20</span></span>, a model that generates if-then commonsense inferences, by systematically varying only the gendered subject names in event prompts.
+                Using a controlled dataset adapted from the WinoBias benchmark and curated lists of male, female, and unisex names, we compared outputs across BART- and GPT-2-based COMET-ATOMIC<span class="atomic20"><span>20</span><span>20</span></span> models.
+                The analysis included sentiment scoring, agreement evaluation, and lexical bias detection.
+                Results revealed statistically significant gender-based differences: for example, female-associated outputs contained more family-related terms and emotional expressions, while male-associated ones showed stronger associations with social and power-related language.
+                These findings highlight that even advanced generative commonsense models can reproduce or amplify gendered patterns, underscoring the need for bias evaluation in reasoning-level AI systems.
+              </p>
+                <p><a class="report-link" href="assets/project-reports/bias-comet-atomic.pdf" target="_blank" rel="noopener">View Report</a></p>
+              </div>
+            </article>
+          </div>
 
-  </div>
+          <!-- Right column -->
+          <div class="projects-column">
+            <article class="project-card">
+              <div class="project-media">
+                <img src="assets/img/code-translation.png" alt="LLM code translation results Python to JS" loading="lazy" style="width: 100%">
+              </div>
+              <div class="project-body">
+                <h3>Investigating the Role of Test Cases in LLM-Based Python and JavaScript Code Translation</h3>
+                <p>
+                  This project investigates how incorporating test cases can improve the accuracy of code translation between Python and JavaScript.
+                  We developed a structured prompting pipeline that progressively enhances translation quality.
+                  Starting from a simple instruction-based baseline, we first introduced test cases into the prompt to provide execution-level context, then added a one-shot example to guide consistent translation behavior.
+                  Beyond these prompt variations, we applied an iterative refinement process that allows the language model to reattempt failed translations using feedback from previous outputs.
+                  Translation correctness was evaluated by running the translated code against ground-truth test cases from the HumanEval-X dataset.
+                  Experiments with Gemini-2.0-Flash and GPT-3.5-Turbo show that these techniques substantially improved translation accuracy—rising from 90.85% to 100% for Gemini in the Python-to-JavaScript direction, and from 48.78% and 64.02% to over 90% for GPT-3.5 across both translation directions—demonstrating the effectiveness of test-aware prompting and refinement in improving code reliability.
+                </p>
+                <p><a class="report-link" href="assets/project-reports/llm-code-translation.pdf" target="_blank" rel="noopener">View Report</a></p>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-media">
+                <div class="image-row">
+                  <img src="assets/img/tbac-block-diagram.png" alt="Actor-Critic Block Diagram">
+                  <img src="assets/img/tbac-pendulum.gif" alt="Pendulum">
+                </div>
+              </div>
+              <div class="project-body">
+                <h3>Transformer-Based Actor-Critic Agent</h3>
+                <p>
+                  This project explores how transformer architectures can enhance reinforcement learning by enabling agents to better capture long-term dependencies and sequential decision patterns. 
+                  We designed a Transformer-Based Actor-Critic (TBAC) model that integrates transformer blocks into the critic network, leveraging self-attention to model temporal relationships in state–action trajectories.
+                  The model was evaluated on OpenAI Gym’s Pendulum environment, where it demonstrated improved stability and generalization compared to a standard Actor-Critic (AC) baseline.
+                </p>
+                <p><a class="report-link" href="assets/project-reports/transformer-RL.pdf" target="_blank" rel="noopener">View Report</a></p>
+              </div>
+            </article>
+          </div>
+        </div>
+        
+      </section>
+    </div>
+  </main>
+
+  <script>
+    const headerHTML = `
+    <header class="header">
+      <h1>Christy (Guanyi) Zhang</h1>
+      
+      <p class="social-links">
+        <a href="mailto:christyyz16@gmail.com">
+          <i class="fas fa-envelope"></i> Email
+        </a> |
+        <a href="https://github.com/christygyzhang" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i> GitHub
+        </a> |
+        <a href="https://linkedin.com/in/christygyzhang" target="_blank" rel="noopener">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+      </p>
+
+      <nav class="navbar">
+        <a href="index.html" data-nav>Home</a>
+        <a href="projects.html" data-nav>Projects</a>
+        <a href="assets/Christy_Guanyi_Zhang_Resume.pdf" target="_blank">Resume</a>
+      </nav>
+    </header>
+    `;
+    document.getElementById('header-placeholder').innerHTML = headerHTML;
+  </script>
+
 </body>
 </html>

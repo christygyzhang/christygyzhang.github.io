@@ -4,21 +4,12 @@
   <meta charset="UTF-8" />
   <title>Christy (Guanyi) Zhang</title>
   <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>Christy (Guanyi) Zhang</h1>
-      <p>
-        <a href="https://github.com/christygyzhang" target="_blank" rel="noopener">GitHub</a> |
-        <a href="https://linkedin.com/in/christygyzhang" target="_blank" rel="noopener">LinkedIn</a>
-      </p>
-      <nav>
-        <a href="index.html">Home</a> |
-        <a href="projects.html">Projects</a>
-      </nav>
-    </div>
-  </header>
+  <div id="header-placeholder"></div>
 
   <main>
     <div class="container">
@@ -34,7 +25,7 @@
       </section>
     </div>
 
-    <div class="container">
+    <div class="two-column-sections">
       <section id="education" class="education" aria-labelledby="edu-title">
         <h2 id="edu-title">Education</h2>
 
@@ -60,9 +51,7 @@
           </ul>
         </div>
       </section>
-    </div>
 
-    <div class="container">
       <section id="experience" class="experience" aria-labelledby="exp-title">
         <h2 id="exp-title">Work Experience</h2>
         <div class="job">
@@ -86,9 +75,8 @@
           </ul>
         </div>
 
-
         <div class="job">
-          <h3>Data Analyst Intern · <span>Industrial and Commercial Bank of China (ICBC)</span></h3>
+          <h3>Data Analyst Intern · <span>Industrial and Commercial Bank of China</span></h3>
           <p class="time">Mar 2023 – Apr 2023 · Beijing, China</p>
           <ul>
             <li>Analyzed customer churn data across multiple branches and identified patterns to support customer engagement improvements.</li>
@@ -104,9 +92,34 @@
             <li>Developed prototype web and mobile interfaces using C#, .NET, and MySQL to demonstrate core system functionality.</li>
           </ul>
         </div>
-
     </div>
-
   </main>
+
+  <script>
+    const headerHTML = `
+    <header class="header">
+      <h1>Christy (Guanyi) Zhang</h1>
+      
+      <p class="social-links">
+        <a href="mailto:christyyz16@gmail.com">
+          <i class="fas fa-envelope"></i> Email
+        </a> |
+        <a href="https://github.com/christygyzhang" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i> GitHub
+        </a> |
+        <a href="https://linkedin.com/in/christygyzhang" target="_blank" rel="noopener">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+      </p>
+
+      <nav class="navbar">
+        <a href="index.html" data-nav>Home</a>
+        <a href="projects.html" data-nav>Projects</a>
+        <a href="assets/Christy_Guanyi_Zhang_Resume.pdf" target="_blank">Resume</a>
+      </nav>
+    </header>
+    `;
+    document.getElementById('header-placeholder').innerHTML = headerHTML;
+  </script>
 </body>
 </html>
